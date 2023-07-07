@@ -1,0 +1,25 @@
+<div class="container w-75 mt-5 ">
+    <div class="row">
+        <div class="col-md-6 border rounded-start">
+            <label for="id1" class="form-label mx-2">Select Model</label>
+            <input type="text" class="form-control w-75" id="id1" placeholder="Make search" [(ngModel)]="searchTerm">
+           <div class="row mt-2  ">
+                <div class="col-12 ">
+                    <ul class="nav nav-underline" >
+                        <li class="nav-item" *ngFor="let item of varientTypes">
+                            <a class="nav-link  cursorPointer" [ngClass]="selectedVarient===item ? 'active' : 'text-muted' " (click)="setVarientType(item)">{{item}}</a>
+                        </li>
+                    </ul>
+                    <ul class="list-group list-group-flush mt-2 cursorPointer  " style="overflow-y: auto; height:400px;">
+                        <li class="list-group-item "  *ngFor="let varient of varientList | filter : selectedVarient |searchPipe:searchTerm" (click)="setVarientName(varient)">{{varient["Variant Name"]}}</li>
+                        
+                      </ul>
+                </div>
+           </div>
+            
+        </div>
+        <div class="col-md-6 border rounded-end">
+            <app-insurance-details [insuranceData]="insuranceData"></app-insurance-details>
+        </div>
+    </div>
+</div>

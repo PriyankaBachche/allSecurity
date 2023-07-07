@@ -1,0 +1,25 @@
+<div class="container ">
+    <div class="row m-2">
+        <img src="https://d2h44aw7l5xdvz.cloudfront.net/assets/img/cardesktop.svg" alt="" height="100px" width="100px">
+     <div class="border">
+        <div class="col-md-12 mt-3 ">
+            <span class="">Car Name:</span><span class="mx-2 fw-bold">{{insuranceData.brandName}}</span><span routerLink="/car-insurance"><i class="bi bi-pencil-square"></i></span>
+        </div><hr>
+        <div class="col-md-12 mt-3 ">
+            <span class="">Model Name:</span><span class="mx-2 fw-bold">{{insuranceData.modelName}}</span><span [routerLink]="['/car-insurance/select-model',insuranceData.brandName]" ><i class="bi bi-pencil-square"></i></span>
+        </div><hr>
+        <div class="col-md-12 mt-3 ">
+            <span class="">Varient Name:</span><span class="mx-2 fw-bold">{{insuranceData.varientName}}</span><span [routerLink]="['/car-insurance/select-varient',insuranceData.modelName]"><i class="bi bi-pencil-square"></i></span>
+        </div><hr>
+        <div class="col-md-12 mt-3 ">
+            <span class="">Year:</span><span class="mx-2 fw-bold">{{insuranceData.year}}</span>
+        </div><hr>
+        <div class="col-md-12 mt-3 ">
+            <span class="">Month:</span><span class="mx-2 fw-bold">{{insuranceData.month}}</span>
+        </div><hr>
+        <div class="col-md-12 mt-3 ">
+            <span class="">City:</span><span class="mx-2 fw-bold">{{insuranceData.city}}</span>
+        </div><hr>
+    </div>
+
+    </div>

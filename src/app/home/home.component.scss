@@ -1,0 +1,43 @@
+.home-container{
+    height: 90vh;
+    background-image: url(../../assets/1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+//    opacity: 50%;
+// font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.labelcss{
+    font-size: smaller;
+    font-weight: 600;
+    padding-left: 2px;
+    
+}
+.formcss{
+    font-size: smaller;
+    border:0 !important;
+}
+input:focus{
+    outline: 0 !important;
+}
+
+.a{
+    text-decoration: none;
+    color: black;
+    font-size: small;
+    
+}
+.custom{
+    opacity: 50%;
+}
+a.link{
+    text-decoration: none;
+    font-size: 10px;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+

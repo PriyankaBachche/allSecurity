@@ -1,0 +1,16 @@
+<div class="container w-75 mt-5">
+    <div class="row">
+        <div class="col-md-6 border rounded-start">
+            <label for="id1" class="form-label mx-2">Select Model</label>
+            <input type="text" class="form-control w-75" id="id1" placeholder="Make search" [(ngModel)]="searchTerm">
+            <div class="row mt-2">
+  
+            <div class="col-md-10 m-1 border rounded cursorPointer" *ngFor="let item of modelList | searchPipe :searchTerm " (click)="selectModel(item.concat)">
+                <span class="mx-1 ">{{item.concat}}</span>
+            </div>
+        </div>
+    </div>
+        <div class="col-md-6 border rounded-end">
+            <app-insurance-details [insuranceData]="insuranceData"></app-insurance-details>
+        </div>
+    </div>

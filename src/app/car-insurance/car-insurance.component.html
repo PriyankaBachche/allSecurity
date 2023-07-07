@@ -1,0 +1,31 @@
+<div class="container-fluid mt-2 p-2 shadow-sm d-flex bg-white">
+    
+    <ul class="nav flex-grow-1 justify-content-between">
+        <h3 class="text-end me-2 fw-bold title"><span class="p-2"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQOCHfzWA_BhjuQ01--OKc5Pm-aIAkGyJdUw&usqp=CAU" alt="" height="50px" width="50px"></span>AllSecurity</h3>
+        <li class="nav-item">
+            <a class="nav-link text-muted">1. Basic Details</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-muted">2. Choose Plan</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-muted">3. Personal Details</a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link text-muted">4. Payment</a>
+        </li>
+    </ul>
+</div>
+<div class="progress" role="progressbar" aria-label="Warning example" [attr.aria-valuenow]="progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar text-bg-warning" [style.width]="progress + '%'"></div>
+</div>
+<router-outlet></router-outlet>
+
+<div class="row home-container py-3 mb-3 border rounded shadow sticky-bottom" *ngIf="router.url === '/car-insurance/choose-plan' || router.url === '/car-insurance/personal-details'">
+    <div class="total-pay">
+       <span class="fw-bold fs-6">₹{{totalPremiumReceived | async}}</span>
+       <button class="btn btn-warning" *ngIf="router.url != '/car-insurance/personal-details'" routerLink="/car-insurance/personal-details">Continue</button>
+  
+       <button class="btn btn-warning" type="button" (click)="payNow()" *ngIf="router.url == '/car-insurance/personal-details'" routerLink="/car-insurance/personal-details">Pay</button>
+    </div>
+  </div>
